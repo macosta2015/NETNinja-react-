@@ -1,5 +1,5 @@
-import './App.css';
 import Navbar from './Navbar'
+import './index.css'
 import Home from './Home'
 
 function App() {
