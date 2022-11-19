@@ -1,5 +1,6 @@
 import './App.css';
-// import React from 'react'
+import Navbar from './Navbar'
+import Home from './Home'
 
 function App() {
   const title = "Welcome to the new blog"
@@ -8,14 +9,20 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
+
+
+
       <div className="content">
-        <h1>{ title }</h1>
+        <Home />
+
+
+        {/* EARLIER REACT LESSONS */}
+        {/* <h1>{ title }</h1>
         <p> Liked {likes} times</p>
         <p> {Math.random() * 10} </p> 
-
         <a href={link}> Google Website</a>
-
-        <h1>Hello World</h1>
+        <h1>Hello World</h1> */}
       </div>
     </div>
   );
