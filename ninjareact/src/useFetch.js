@@ -8,7 +8,6 @@ const useFetch = (url) => {
     useEffect(() => {
         setTimeout(() =>{
             fetch(url)
-            // fetch('http://localhost:8000/blogs')
             .then(res => {
                 console.log(res)
                 if(!res.ok){

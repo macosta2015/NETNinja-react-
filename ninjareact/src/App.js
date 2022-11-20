@@ -1,6 +1,7 @@
 import Navbar from './Navbar'
 import './index.css'
 import Home from './Home'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
   const title = "Welcome to the new blog"
@@ -8,23 +9,19 @@ function App() {
   const link = "https://github.com"
 
   return (
-    <div className="App">
-      <Navbar />
-
-
-
-      <div className="content">
-        <Home />
-
-
-        {/* EARLIER REACT LESSONS */}
-        {/* <h1>{ title }</h1>
-        <p> Liked {likes} times</p>
-        <p> {Math.random() * 10} </p> 
-        <a href={link}> Google Website</a>
-        <h1>Hello World</h1> */}
+    <Router>
+      <div className="App">
+      {/* The Navbar will always show as it is not in the switch statement */}
+        <Navbar /> 
+        <div className="content">
+          <Switch>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
